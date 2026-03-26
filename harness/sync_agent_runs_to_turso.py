@@ -248,7 +248,7 @@ def main() -> int:
     parser.add_argument(
         "--tag-mode",
         choices=["none", "run_name", "model_name"],
-        default="run_name",
+        default="none",
         help="How to populate agent_runs.tag.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Print summary only, do not write to Turso.")
