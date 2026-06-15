@@ -21,8 +21,8 @@ if os.geteuid() != 0:
     # because file operations may fail for folders mounted to docker
 
 
-EVAL_THREADS = 8
-EVAL_TIMEOUT_S = 1200
+EVAL_THREADS = 2
+EVAL_TIMEOUT_S = 3600
 RESULT_PATH = Path("results") 
 DOCKER_IMAGE_BASE = os.environ.get('DOCKER_IMAGE_BASE', 'jefzda/sweap-images')
 FILE_OWNER_UID = getpwnam(os.getenv('FILE_OWNER', 'root')).pw_uid
