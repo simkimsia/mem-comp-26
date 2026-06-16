@@ -29,7 +29,7 @@
             "SELF_REVIEW_MAX_EXTRA_COST": "0.15",
             "SELF_REVIEW_MAX_CHANGED_FILES": "3",
             "SELF_REVIEW_MAX_DIFF_LINES": "120",
-            "MEMORY_EMBED_MODEL": "litellm_proxy/nomic-embed-text-v1.5",
+            "MEMORY_EMBED_MODEL": "bge-m3",
             "MEMORY_TOP_K": "5",
             "MEMORY_SCORE_WEIGHT": "0.25"
         }
