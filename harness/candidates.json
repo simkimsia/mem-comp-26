@@ -1,20 +1,37 @@
 [
     {
-        "run_name": "baseline_gpt52_nomem",
-        "agent_docker_image": "minisweagent-withmem:latest",
-        "llm_quota_total": 200,
-        "llm_quota_instance": 2,
+        "run_name": "kimi_ew23_nomem_et2_20260616",
+        "agent_docker_image": "kimsia-mem-agent:latest",
+        "llm_quota_total": 1000,
+        "llm_quota_instance": 10,
         "enable_memory": false,
         "timeout_s": 7200,
-        "env": {"MODEL_NAME": "litellm_proxy/gpt-5.2"}
+        "env": {
+            "MODEL_NAME": "litellm_proxy/kimi-k2-instruct-0905",
+            "SELF_REVIEW_ENABLED": "1",
+            "SELF_REVIEW_MAX_EXTRA_STEPS": "2",
+            "SELF_REVIEW_MAX_EXTRA_COST": "0.15",
+            "SELF_REVIEW_MAX_CHANGED_FILES": "3",
+            "SELF_REVIEW_MAX_DIFF_LINES": "120"
+        }
     },
     {
-        "run_name": "baseline_gpt52_mem",
-        "agent_docker_image": "minisweagent-withmem:latest",
-        "llm_quota_total": 200,
-        "llm_quota_instance": 2,
+        "run_name": "kimi_ew23_mem_et2_20260616",
+        "agent_docker_image": "kimsia-mem-agent:latest",
+        "llm_quota_total": 1000,
+        "llm_quota_instance": 10,
         "enable_memory": true,
         "timeout_s": 7200,
-        "env": {"MODEL_NAME": "litellm_proxy/gpt-5.2"}
+        "env": {
+            "MODEL_NAME": "litellm_proxy/kimi-k2-instruct-0905",
+            "SELF_REVIEW_ENABLED": "1",
+            "SELF_REVIEW_MAX_EXTRA_STEPS": "2",
+            "SELF_REVIEW_MAX_EXTRA_COST": "0.15",
+            "SELF_REVIEW_MAX_CHANGED_FILES": "3",
+            "SELF_REVIEW_MAX_DIFF_LINES": "120",
+            "MEMORY_EMBED_MODEL": "litellm_proxy/nomic-embed-text-v1.5",
+            "MEMORY_TOP_K": "5",
+            "MEMORY_SCORE_WEIGHT": "0.25"
+        }
     }
 ]
